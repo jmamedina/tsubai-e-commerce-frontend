@@ -16,7 +16,8 @@
                 Logo
             </a>
         </div>
-        <div class="block z-10 fixed top-0 bottom-0 h-full w-[220px] bg-slate-900 left-0 shadow-2xl transition-all md:hidden">
+        <!-- mobile menu -->
+        <div class="block z-10 fixed left-[-220px] top-0 bottom-0 h-full w-[220px] bg-slate-900 left-0 shadow-2xl transition-all md:hidden">
             <ul>
                 <li><a href="/src/index.html" class="flex items-center px-2 py-2transition-all hover:bg-slate-700">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
@@ -90,6 +91,8 @@
                     Signup for free</a> </li>   
             </ul>
         </div>
+        <!-- mobile menu end -->
+        
         <nav class ="hidden md:block">
             <ul class="grid grid-flow-col">
                 <li><a href="/src/index.html" class="flex item-center px-navbar-item py-navbar-item transition-all hover:bg-slate-700"> 
@@ -174,14 +177,11 @@
 
     <!-- cart item page -->
     <main class="p-5">
-        <div class="containter mx-auto lg:w-2/3 xl:w-2/3 mx-auto">
-            <div class="p-5">
+        <div class="containter lg:w-2/3 xl:w-2/3 mx-auto">
                 <h1 class="text-3xl font-bold mb-6">My Cart Items</h1>
-
                 <div class="bg-white rounded-lg p-4 shadow">
                     <!-- cart item-->
-                    <div class="flex gap-4">
-                        
+                    <div class="flex items-center flex-col sm:flex-row  gap-4">
                         <img class="w-36" src="/src/img/Airpods.jpg" alt="">
                         <div class="flex-1 flex flex-col justify-between">
                             <div class="flex justify-between mb-3">
@@ -195,7 +195,7 @@
                             <div class="flex justify-between items-center">
                                 <div class="flex items-center">
                                     Qty:
-                                    <select class="ml-3 py-1 border-gray-200 focus:border-purple-600 focus:ring-purple-600" name="" id="">
+                                    <select class="ml-3 py-1 border-gray-200 focus:border-purple-600 focus:ring-purple-600 mr-3 w-16" name="" id="">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -225,7 +225,6 @@
                         Checkout
                     </button>
                 </div>
-            </div>
         </div>
     </main>
     

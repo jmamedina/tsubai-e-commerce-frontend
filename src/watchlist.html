@@ -16,7 +16,8 @@
                 Logo
             </a>
         </div>
-        <div class="block z-10 fixed top-0 bottom-0 h-full w-[220px] bg-slate-900 left-0 shadow-2xl transition-all md:hidden">
+        <!-- mobile menu -->
+        <div class="block z-10 fixed left-[-220px] top-0 bottom-0 h-full w-[220px] bg-slate-900 left-0 shadow-2xl transition-all md:hidden">
             <ul>
                 <li><a href="/src/index.html" class="flex items-center px-2 py-2transition-all hover:bg-slate-700">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
@@ -90,6 +91,8 @@
                     Signup for free</a> </li>   
             </ul>
         </div>
+        <!-- mobile menu end -->
+        
         <nav class ="hidden md:block">
             <ul class="grid grid-flow-col">
                 <li><a href="/src/index.html" class="flex item-center px-navbar-item py-navbar-item transition-all hover:bg-slate-700"> 
@@ -175,18 +178,16 @@
     <!-- cart item page -->
     <main class="p-5">
         <div class="containter mx-auto lg:w-2/3 xl:w-2/3 mx-auto">
-            <div class="p-5">
                 <h1 class="text-3xl font-bold mb-6">My Watchlist Items</h1>
 
                 <div class="bg-white rounded-lg p-4 shadow">
                     <!-- cart item-->
-                    <div class="flex gap-4">
-                        
-                        <img class="w-36" src="/src/img/Airpods.jpg" alt="">
+                    <div class="flex items-center flex-col sm:flex-row gap-4 ">
+                            <img class="w-36" src="/src/img/Airpods.jpg" alt="">
                         <div class="flex-1 flex flex-col justify-between">
                             <div class="flex-1 flex flex-col justify-between">
                             <div class="flex justify-between mb-3">
-                                <h3>
+                                <h3 class="mr-4">
                                     Airpods
                                 </h3>
                                 <span class="text-lg font-semibold">
@@ -202,7 +203,6 @@
                     <!-- cart item /-->
                     <hr class="my-5">
                 </div>
-            </div>
         </div>
     </main>
     

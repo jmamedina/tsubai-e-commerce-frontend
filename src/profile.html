@@ -16,7 +16,8 @@
                 Logo
             </a>
         </div>
-        <div class="block z-10 fixed top-0 bottom-0 h-full w-[220px] bg-slate-900 left-0 shadow-2xl transition-all md:hidden">
+        <!-- mobile menu -->
+        <div class="block z-10 fixed left-[-220px] top-0 bottom-0 h-full w-[220px] bg-slate-900 left-0 shadow-2xl transition-all md:hidden">
             <ul>
                 <li><a href="/src/index.html" class="flex items-center px-2 py-2transition-all hover:bg-slate-700">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
@@ -90,6 +91,8 @@
                     Signup for free</a> </li>   
             </ul>
         </div>
+        <!-- mobile menu end -->
+        
         <nav class ="hidden md:block">
             <ul class="grid grid-flow-col">
                 <li><a href="/src/index.html" class="flex item-center px-navbar-item py-navbar-item transition-all hover:bg-slate-700"> 
@@ -173,173 +176,161 @@
     </header>
 
     <!-- my profile page -->
-    <main class="p-5 pt-48">
-        <div class="containter mx-auto lg:w-2/3 xl:w-2/3 mx-auto">
-            <div class="grid grid-cols-3 gap-6">
-             <!-- Profile Details -->
-                <div class="bg-white p-3 shadow rounded-lg col-span-2">
-                    <h2 class="text-2xl font-semibold mb-5"> Profile Details </h2>
-                    <div class="mb-4">
-                        <input 
-                        type="text" 
-                        name="name"
-                        placeholder="Your Name"
-                        class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600">
+    <main class="p-5">
+        <div class="mx-auto lg:w-2/3 xl:w-2/3 mx-auto">
+            <div class="flex items-start grid gap-6 grid-cols-1 sm:grid-cols-5 ">
+                <div class="bg-white p-3 col-span-3 shadow rounded-lg ">
+                    <!-- Profile Details -->
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-semibold mb-5"> Profile Details </h2>
+                        <div class="mb-4">
+                            <input type="text" name="name" placeholder="Your Name"
+                                class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" name="email" placeholder="Your Email"
+                                class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600">
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" name="phone" placeholder="Your Phone"
+                                class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600">
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        <input 
-                        type="email"
-                        name="email" 
-                        placeholder="Your Email"
-                        class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600">
-                    </div>
-                    <div class="mb-4">
-                        <input 
-                        type="text" 
-                        name="phone"
-                        placeholder="Your Phone"
-                        class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600">
-                    </div>
-             <!-- Profile Details /-->
-               <div class="mb-6">
-               </div>
-             <!-- Billing Address -->
-               <div class="mb-6">
-                <h2 class="text-xl mb-5"> Billing Address </h2>
-                <div class="flex gap-3">
-                    <div class="mb-4 flex-1">
-                        <input 
-                        class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600" 
-                        type="text" 
-                        name="billing_address_1"
-                        placeholder="Address 1">
-                    </div>
-                    <div class="mb-4 flex-1">
-                        <input class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600" 
-                        type="text" 
-                        name="billing_address_2"
-                        placeholder="Address 2">
-                    </div> 
-                </div>
-                <div class="flex gap-3">
-                    <div class="mb-4 flex-1">
-                        <input 
-                        class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600" 
-                        type="text"
-                        name="billing_city"
-                        placeholder="City">
-                    </div>
-                    <div class="mb-4 flex-1">
-                        <input 
-                        class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600" 
-                        type="text" 
-                        name="billing_state"
-                        placeholder="State">
-                    </div>
-                </div>
-                <div class="flex gap-3">
-                    <div class="mb-4 flex-1">
-                        <select
-                        placeholder="Country"
-                        type="text"
-                        name="billing_country"
-                        class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full">
-                        <option value=""> Country </option>
-                        <option value="jp"> Japan </option>
-                        <option value="ph"> Philippines </option>
-                        <option value="ge"> Georgia </option>
-                        <option value="de"> Germany </option>
-                        <option value="in"> India </option>
-                        <option value="us"> United States </option>
-                        </select>
-                    </div>
-                    <div class="mb-4 flex-1">
-                        <input 
-                        placeholder="Zipcode"
-                        type="text"
-                        name="billing_zipcode"
-                        class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full">
-                    </div>
-                </div>
-                <!-- Billing Address /-->
+                    <!-- Profile Details /-->
 
-                <!-- Shipping Address -->
-                <div class="mb-6">
-                    <div class="flex justify-between">
-                        <div class="items-center ,">
-                            <h2 class="text-xl mt-10 mb-5"> Shipping Address </h2>
+                    <!-- Billing Address -->
+                    <div class="mb-6">
+                        <h2 class="text-xl mb-5"> Billing Address </h2>
+                        <div class="flex gap-3">
+                            <div class="mb-4 flex-1">
+                                <input
+                                    class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600"
+                                    type="text" name="billing_address_1" placeholder="Address 1">
+                            </div>
+                            <div class="mb-4 flex-1">
+                                <input
+                                    class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600"
+                                    type="text" name="billing_address_2" placeholder="Address 2">
+                            </div>
                         </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="sameAdBilling" text="Same as billing" class="mr-3 rounded text-purple-500 focus:ring-purple-600"/>
-                            <label class="text-l"  for="sameAdBilling">
-                                Same as billing
-                            </label>
+                        <div class="flex gap-3">
+                            <div class="mb-4 flex-1">
+                                <input
+                                    class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600"
+                                    type="text" name="billing_city" placeholder="City">
+                            </div>
+                            <div class="mb-4 flex-1">
+                                <input
+                                    class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600"
+                                    type="text" name="billing_state" placeholder="State">
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex gap-3">
-                        <div class="mb-4 flex-1">
-                            <input 
-                            class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600" 
-                            type="text" 
-                            name="billing_address_1"
-                            placeholder="Address 1">
-                        </div>
-                        <div class="mb-4 flex-1">
-                            <input class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600" 
-                            type="text" 
-                            name="billing_address_2"
-                            placeholder="Address 2">
-                        </div> 
-                    </div>
-                    <div class="flex gap-3">
-                        <div class="mb-4 flex-1">
-                            <input 
-                            class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600" 
-                            type="text"
-                            name="billing_city"
-                            placeholder="City">
-                        </div>
-                        <div class="mb-4 flex-1">
-                            <input 
-                            class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600" 
-                            type="text" 
-                            name="billing_state"
-                            placeholder="State">
-                        </div>
-                    </div>
-                    <div class="flex gap-3">
-                        <div class="mb-4 flex-1">
-                            <select
-                            placeholder="Country"
-                            type="text"
-                            name="billing_country"
-                            class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full">
-                            <option value=""> Country </option>
-                            <option value="jp"> Japan </option>
-                            <option value="ph"> Philippines </option>
-                            <option value="ge"> Georgia </option>
-                            <option value="de"> Germany </option>
-                            <option value="in"> India </option>
-                            <option value="us"> United States </option>
-                            </select>
-                        </div>
-                        <div class="mb-4 flex-1">
-                            <input 
-                            placeholder="Zipcode"
-                            type="text"
-                            name="billing_zipcode"
-                            class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full">
+                        <div class="flex gap-3">
+                            <div class="mb-4 flex-1">
+                                <select placeholder="Country" type="text" name="billing_country"
+                                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full">
+                                    <option value=""> Country </option>
+                                    <option value="jp"> Japan </option>
+                                    <option value="ph"> Philippines </option>
+                                    <option value="ge"> Georgia </option>
+                                    <option value="de"> Germany </option>
+                                    <option value="in"> India </option>
+                                    <option value="us"> United States </option>
+                                </select>
+                            </div>
+                            <div class="mb-4 flex-1">
+                                <input placeholder="Zipcode" type="text" name="billing_zipcode"
+                                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full">
+                            </div>
                         </div>
                     </div>
+                    <!-- Billing Address /-->
+
+                    <!-- Shipping Address -->
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-6">
+                            <div class="items-center">
+                                <h2 class="text-xl mt-2mb-5"> Shipping Address </h2>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="sameAsBillingAddress" text="Same as billing"
+                                    class="mr-3 rounded text-purple-500 focus:ring-purple-600" />
+                                <label class="text-l text-gray-500" for="sameAsBillingAddress">
+                                    Same as billing
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="mb-4 flex-1">
+                                <input
+                                    class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600"
+                                    type="text" name="billing_address_1" placeholder="Address 1">
+                            </div>
+                            <div class="mb-4 flex-1">
+                                <input
+                                    class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600"
+                                    type="text" name="billing_address_2" placeholder="Address 2">
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="mb-4 flex-1">
+                                <input
+                                    class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600"
+                                    type="text" name="billing_city" placeholder="City">
+                            </div>
+                            <div class="mb-4 flex-1">
+                                <input
+                                    class="w-full rounded border-gray-300 focus:border-purple-600 focus:ring-purple-600"
+                                    type="text" name="billing_state" placeholder="State">
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="mb-4 flex-1 text-gray-500">
+                                <select placeholder="Country" type="text" name="billing_country"
+                                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full">
+                                    <option value=""> Country </option>
+                                    <option value="jp"> Japan </option>
+                                    <option value="ph"> Philippines </option>
+                                    <option value="ge"> Georgia </option>
+                                    <option value="de"> Germany </option>
+                                    <option value="in"> India </option>
+                                    <option value="us"> United States </option>
+                                </select>
+                            </div>
+                            <div class="mb-4 flex-1">
+                                <input placeholder="Zipcode" type="text" name="billing_zipcode"3
+                                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shipping Address -->
+                    <button class="btn-emerald justify-center w-full">
+                        Update
+                    </button>
                 </div>
-                <!-- Shipping Address -->
-                <button class="btn-emerald justify-center w-full">
-                    Update
-                </button>
-           </div>
+
+                <div class="bg-white col-span-3 sm:col-span-2 p-3 rounded-lg shadow">
+                        <h2 class="text-xl mb-5">Your Account</h2>
+                        <div class="mb-4">
+                            <input type="password" name="password" placeholder="Your Current password"
+                                class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full" />
+                        </div>
+                        <div class="mb-4">
+                            <input type="password" name="password" placeholder="New password"
+                                class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full" />
+                        </div>
+                        <div class="mb-4">
+                            <input type="password" name="password" placeholder="Repeat new password"
+                                class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full" />
+                        </div>
+                        <div>
+                            <button class="btn-emerald">Update</button>
+                        </div>
+                </div>
+            </div>
         </div>
     </main>
-    
+
     <!-- my profile page/-->
 </body>
 
