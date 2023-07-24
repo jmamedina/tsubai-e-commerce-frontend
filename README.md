@@ -1,1 +1,1 @@
-# e-commerce-frontend
+# Frontend template for the laravel-vue ecommerce website
