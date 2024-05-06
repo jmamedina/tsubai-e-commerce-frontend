@@ -1,4 +1,4 @@
-Laravel-Vue Ecommerce Frontend Template
+Laravel-Vue Tsubai Ecommerce Frontend Template
 This frontend template provides a solid foundation for building an ecommerce website using Laravel and Vue.js. It's designed to be easily integrated with Laravel backend and includes essential features to kickstart your project.
 
 Features:
